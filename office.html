@@ -1,4 +1,5 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 #id {
@@ -32,6 +33,34 @@ body {
 	
 }
 
+@media only screen and (max-width: 600px) {
+  #home {
+    font-size:100px;
+  }
+
+   #carousel {
+  	position: absolute;
+  	left:0;
+  	top:400px;
+
+  }
+
+  #bigImage {
+  	position: relative;
+  	margin-left:-250px;
+  	top:0px;
+ 
+  }
+
+  #bigImage img {
+  	width:375px;
+  	height:250px;
+  }
+
+ 
+
+}
+
 #home {
 	font-size:35px;
 	position:relative;
@@ -53,7 +82,7 @@ body {
 <body>
 
 <a id = "home">TALAPTAN</a>
-<div id="bigImage">
+<div class = "div"><div id="bigImage">
       <img src="https://currimbhoy.net/wp-content/uploads/2019/05/13.jpg"/>
     </div>
     <div id="carousel">
@@ -62,7 +91,7 @@ body {
           <img id="i3" src="https://currimbhoy.net/wp-content/uploads/2019/05/15.jpg"/>
           <img id="i4" src="https://nearshoreamericas.com/wp-content/uploads/2020/03/dc_mckinsey-17-1024x682.jpg"/>
           <img id="i5" src="https://managementconsulted.com/app/uploads/2019/11/mckinsey-london-post-building.jpg"/>
-    </div>
+    </div></div>
 
 <script>
 function first(){	

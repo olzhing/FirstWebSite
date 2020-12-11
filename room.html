@@ -8,7 +8,7 @@ body {
     box-shadow: 1px 1px 4px #000000;
     margin-right:450px;
     margin-left:425px;
-    padding-bottom:150px;
+    padding-bottom:100px;
     padding-top:15px;
     text-align:center;
 }
@@ -31,14 +31,40 @@ h1 {
 	font-size:20px;
 }
 
+a {
+	text-decoration-line:none; 
+}
+
+form {
+	margin-top:25px;
+}
+
 </style>
 
 <body>
-<h1>TALAPTANKZ</h1>
+
+<a href = "Main.html"><h1>TALAPTANKZ</h1></a>
 <div class = "room">
-<a>Request to room</a>
+<a>Request to room</a><br>
+Please write your phone number...
+<form action="form.php" method="get">
+<input type = "text" name="number" onkeypress="isInputNumber(event)"/>
+<input type="submit">
 
+</form>
 
+<script>
+  function isInputNumber(evt){
+                
+                var ch = String.fromCharCode(evt.which);
+                
+                if(!(/[0-9]/.test(ch))){
+                    evt.preventDefault();
+                }
+                
+            }
+            
+</script>
 </div>
 </body>
 </html>

@@ -33,9 +33,10 @@ body {
 }
 
 .room {
-  margin-top:450px;
-  margin-right:40px;
-  margin-left:980px;
+  position:absolute;
+  top:10px;
+  
+  margin-left:1050px;
   
   border:2px solid #5F39E2;
   
@@ -54,8 +55,8 @@ body {
   box-shadow: 1px 1px;
 }
 
-.footer {
-	
+.footer { 
+   position: absolute;
    bottom: 0;
    left:0;
    right:0;
@@ -66,6 +67,7 @@ body {
    padding-bottom:10px;
    padding-top:10px;
    margin-top:20px;
+
     
 }
 
@@ -76,9 +78,10 @@ body {
 
 .element {
   border: 2px solid #5F39E2;
-  margin-top:70px;
+  margin-top:40px;
   margin-left:200px;
   margin-right:200px;
+  padding-bottom:25px;
 }
 
 .element a {
@@ -94,31 +97,53 @@ body {
 	margin-top:25px;
 	margin-bottom:25px;
 }
+
+a {
+	text-decoration-line:none;
+}
+
+#text {
+	margin-left: 7px;
+	margin-right: 7px;
+	color: #5F39E2;
+}
+
 </style>
 
 
 <body>
 
 <nav class = "menu">
-<a id = "home">TALAPTAN</a>
+<a id = "home" href = "Main.html">TALAPTAN</a>
 <div class = "nav">
 <a>LOCATION</a>
-<a>SPECIALITY</a>
+<a href = "List.html">SPECIALITY</a>
 <a>RATING</a>
 </div>
 
 <div class = "room">
-<a>MY ROOM</a>
+<a href = "Room.html">MY ROOM</a>
 </div>
 </nav>
 
 <div class = "element">
 <a>SULEYMAN DEMIREL UNIVERSITY</a>
-<div id = "img"><img src = "https://upload.wikimedia.org/wikipedia/commons/e/ed/SDU.new.logo.small.png" width = "150" height = "100"></div><div> It is a private university in Kaskelen, Almaty, Kazakhstan. It is named after Süleyman Demirel, the former prime minister and president of Turkey.
+<div id = "img"><img src = "https://upload.wikimedia.org/wikipedia/commons/e/ed/SDU.new.logo.small.png" width = "150" height = "100"></div>
+<div id = "text">It is a private university in Kaskelen, Almaty, Kazakhstan. It is named after Suleyman Demirel, the former prime minister and president of Turkey.
 
-The university was established in 1996, by the initiatives of the president of Kazakhstan, Nursultan Nazarbayev, and the former president of Turkey, Suleyman Demirel.</div>
+The university was established in 1996, by the initiatives of the president of Kazakhstan, Nursultan Nazarbayev, and the former president of Turkey, Suleyman Demirel.
+<br>
+<br>
+<br>
+Location: Almaty, Kaskelen district, Kazakhstan<br>
+Website: www.sdu.edu.kz
 
 </div>
+</div>
+
+
+
+
 
 <div class = "footer">
 <div><a>Keep in touch</a><br>
