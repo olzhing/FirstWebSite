@@ -1,36 +1,36 @@
-<!DOCTYPE html>
-<html>
-<style>
+<?php
+$username = filter_input(INPUT_POST, 'username');
 
-body {
-	position: absolute;
-	left: 530px;
-	top:200px;
-	text-align:center;
-	border: 1px solid red;
-	padding: 15px 15px 15px 15px;
+if (!empty($username)){
+
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "uni";
+// Create connection
+$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+if (mysqli_connect_error()){
+die('Connect Error ('. mysqli_connect_errno() .') '
+. mysqli_connect_error());
+}
+else{
+$sql = "INSERT INTO account (number)
+values ('$username')";
+if ($conn->query($sql)){
+echo "New record is inserted sucessfully";
+}
+else{
+echo "Error: ". $sql ."
+". $conn->error;
+}
+$conn->close();
+}
+}
+else{
+echo "Number should not be empty";
+die();
 }
 
-form {
-	position: relative;
-	top: 20px;
-}
+?>
 
-
-</style>
-
-<body>
-
-We sent code to <?php echo $_GET["number"]; ?> 
-<br>
-<br>
-Write down them:
-<form action="Main.html" method="get">
-<input type = "text" name = "number"/>
-</form>
-
-HOME
-
-
-</body>
-</html>
+<a href = "Main.html">Go home, dude</a>

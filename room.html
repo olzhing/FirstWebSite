@@ -47,24 +47,20 @@ form {
 <div class = "room">
 <a>Request to room</a><br>
 Please write your phone number...
-<form action="form.php" method="get">
-<input type = "text" name="number" onkeypress="isInputNumber(event)"/>
-<input type="submit">
+<!DOCTYPE html>
 
+<head>
+<title>Form site</title>
+</head>
+<body>
+<form method="post" action="form.php">
+Number: <input type="text" name="username"><br><br>
+<br>
+<input type="submit" value="Submit">
 </form>
+</body>
+</html>
 
-<script>
-  function isInputNumber(evt){
-                
-                var ch = String.fromCharCode(evt.which);
-                
-                if(!(/[0-9]/.test(ch))){
-                    evt.preventDefault();
-                }
-                
-            }
-            
-</script>
 </div>
 </body>
 </html>
