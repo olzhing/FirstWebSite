@@ -150,13 +150,6 @@ Almaty, 050040 Kazakhstan<br>
         
     <script>
       
-      var searchInput = document.getElementsByTagName('input')[0];
-      
-
-      if(localStorage.getItem('favorite') == null){
-        localStorage.setItem('favorite', '[]');
-      }
-
       
       fetch("list.php").then(onSuccesAll, onError);
     
